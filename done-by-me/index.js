@@ -38,3 +38,64 @@ if (input === '1') {
     connection.end();
   });
 }
+
+function displayMenu() {
+    console.log('Welcome to the Employee Management System!');
+    inquirer
+      .prompt([
+        {
+          type: 'list',
+          name: 'option',
+          message: 'Please select an option:',
+          choices: [
+            'View all departments',
+            'View all roles',
+            'View all employees',
+            'Add a department',
+            'Add a role',
+            'Add an employee',
+            'Update an employee role',
+            'Exit'
+          ]
+        }
+      ])
+      .then((answers) => {
+        handleOption(answers.option);
+      });
+  }
+  
+  function handleOption(option) {
+    switch (option) {
+      case 'View all departments':
+       
+        break;
+      case 'View all roles':
+       
+        break;
+      case 'View all employees':
+       
+        break;
+      case 'Add a department':
+       
+        break;
+      case 'Add a role':
+       
+        break;
+      case 'Add an employee':
+       
+        break;
+      case 'Update an employee role':
+       
+        break;
+      case 'Exit':
+        connection.end();
+        return;
+    }
+  
+    
+    displayMenu();
+  }
+  
+  
+  displayMenu();
+  
